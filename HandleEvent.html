@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event</title>
+    <script src="angular.min.js"></script>
+    <script src="ScriptHandleEvent.js"></script>
+</head>
+<body ng-app="handleEvent">
+    <div ng-controller="handleEventController">
+        <table>
+            <tr>
+                <td>Name</td>
+                <td>Likes</td>
+                <td>Dislike</td>
+                <td>Actions</td>
+                <td>Minus</td>
+            </tr>
+            <tr ng-repeat="technology in technology">
+                <td>{{technology.Name}}</td>
+                <td>{{technology.Like}}</td>
+                <td>{{technology.Dislike}}</td>
+                <td>{{technology.Minus}}</td>
+                <td>
+                    <button ng-click="increaseLike(technology)">Like</button>
+                    <button ng-click="increaseDislike(technology)">Dislike</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
